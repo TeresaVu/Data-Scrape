@@ -7,13 +7,9 @@ digCitWeek = []
 
 # Using TwitterSearchScraper to scrape data and append tweets to list
 for i,tweet in enumerate(sntwitter.TwitterHashtagScraper('#MediaLitWeek').get_items()):
-    if i>10:
-        break
     mediaLitWeek.append([tweet.date.date(), tweet.likeCount, tweet.user.username, tweet.content])
 
 for i,tweet in enumerate(sntwitter.TwitterHashtagScraper('#DigCitWeek').get_items()):
-    if i>10:
-        break
     digCitWeek.append([tweet.date.date(), tweet.likeCount, tweet.user.username, tweet.content])
     
 # Creating a dataframe from the tweets list above 
